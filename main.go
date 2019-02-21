@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 )
 
 func main() {
-	videodir := os.Getenv("VIDEO_DIR")
-	fmt.Println(videodir)
+	picdir := os.Getenv("PIC_DIR")
+	fmt.Println(filepath.Glob(picdir))
 }
