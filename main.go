@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	fmt.Println("Hello docker!")
+	videodir := os.Getenv("VIDEO_DIR")
+	fmt.Println(videodir)
 }

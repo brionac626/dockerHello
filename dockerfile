@@ -4,9 +4,12 @@ MAINTAINER AutumnAoi
 ENV GO111MODULE=on
 
 RUN git clone https://github.com/brionac626/dockerHello.git
-RUN cd ./dockerHello && go build -o hello
+RUN cd ./dockerHello && go build
 
 FROM alpine
 WORKDIR /app
+WORKDIR /picture
+WORKDIR /video
+ENV VIDEO_DIR /video
 COPY --from=bs /go/dockerHello /app/
-ENTRYPOINT [ "./hello" ]
+ENTRYPOINT [ "./main" ]
