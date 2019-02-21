@@ -1,4 +1,4 @@
-FROM golang:1.11.2 AS bs
+FROM golang:1.11.5 AS bs
 MAINTAINER AutumnAoi
 
 ENV GO111MODULE=on
@@ -9,7 +9,6 @@ RUN cd ./dockerHello && go build -o main
 FROM alpine
 
 WORKDIR /app
-ENV VIDEO_DIR /video
 ENV PIC_DIR /picture
 VOLUME [ "/picture" ]
 

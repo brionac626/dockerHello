@@ -8,5 +8,6 @@ import (
 
 func main() {
 	picdir := os.Getenv("PIC_DIR")
-	fmt.Println(filepath.Glob(picdir))
+	fmt.Println(filepath.Glob(picdir + "/*"))
+
 }
