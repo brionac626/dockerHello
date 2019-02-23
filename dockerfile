@@ -3,7 +3,8 @@ MAINTAINER AutumnAoi
 
 ENV GO111MODULE=on
 
-RUN git clone https://github.com/brionac626/dockerHello.git
+# RUN git clone https://github.com/brionac626/dockerHello.git
+COPY ./ ./dockerHello
 RUN cd ./dockerHello && go build -o main
 
 FROM alpine
